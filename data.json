@@ -1,0 +1,77 @@
+{
+    "organization": {
+        "Organization Name": "ABC Company Ltd",
+        "Registration Number": "123456789"
+    },
+    "payPeriod": {
+        "year": 2025,
+        "month": 1
+    },
+    "employees": [
+    {
+      "staffNIN": "CF123456789",
+      "staffNssfNumber": "EMP001",
+      "contributionType": "Standard",
+      "incomeType": "Salary",
+      "staffName": "John Doe",
+      "staffBasicPay": 350000,
+      "staffMedicalPay": 50000,
+      "staffHousingPay": 70000,
+      "staffBonus": 30000,
+      "PAYE": 50000,
+      "savings": 20000
+    },
+    {
+      "staffNIN": "CF987654321",
+      "staffNssfNumber": "EMP002",
+      "contributionType": "Standard",
+      "incomeType": "Salary",
+      "staffName": "Jane Smith",
+      "staffBasicPay": 400000,
+      "staffMedicalPay": 60000,
+      "staffHousingPay": 80000,
+      "staffBonus": 40000,
+      "PAYE": 60000,
+      "savings": 25000
+    },
+    {
+      "staffNIN": "CF135792468",
+      "staffNssfNumber": "EMP003",
+      "contributionType": "Standard",
+      "incomeType": "Salary",
+      "staffName": "Alice Johnson",
+      "staffBasicPay": 300000,
+      "staffMedicalPay": 40000,
+      "staffHousingPay": 60000,
+      "staffBonus": 25000,
+      "PAYE": 45000,
+      "savings": 15000
+    },
+    {
+      "staffNIN": "CF246813579",
+      "staffNssfNumber": "EMP004",
+      "contributionType": "Standard",
+      "incomeType": "Salary",
+      "staffName": "Bob Brown",
+      "staffBasicPay": 480000,
+      "staffMedicalPay": 70000,
+      "staffHousingPay": 90000,
+      "staffBonus": 30000,
+      "PAYE": 65000,
+      "savings": 30000
+    },
+    {
+      "staffNIN": "CF112233445",
+      "staffNssfNumber": "EMP005",
+      "contributionType": "Standard",
+      "incomeType": "Salary",
+      "staffName": "Clara White",
+      "staffBasicPay": 550000,
+      "staffMedicalPay": 80000,
+      "staffHousingPay": 100000,
+      "staffBonus": 30000,
+      "PAYE": 70000,
+      "savings": 40000
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../generated/prisma"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Organization {
+  id                 Int        @id @default(autoincrement())
+  organizationName   String     @unique
+  registrationNumber String     @unique
+  employees          Employee[]
+}
+
+model PayPeriod {
+  id        Int        @id @default(autoincrement())
+  year      Int
+  month     Int
+  employees Employee[]
+}
+
+model Employee {
+  id               Int          @id @default(autoincrement())
+  staffNIN         String       @unique
+  staffNssfNumber  String       @unique
+  contributionType String
+  incomeType       String
+  staffName        String
+  staffBasicPay    Int
+  staffMedicalPay  Int
+  staffHousingPay  Int
+  staffBonus       Int
+  PAYE             Int
+  savings          Int
+  organization     Organization @relation(fields: [organizationId], references: [id])
+  organizationId   Int
+  payPeriod        PayPeriod    @relation(fields: [payPeriodId], references: [id])
+  payPeriodId      Int
+}
