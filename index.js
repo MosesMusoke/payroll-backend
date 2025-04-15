@@ -10,7 +10,7 @@ const zohoRoutes = require("./routes/zohoRoutes");
 const { home } = require("./controllers/employeeController");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -133,7 +133,7 @@ app.get('/api/employees/salary-details', async (req, res) => {
     }
   });
 
-app.listen(PORT,'0.0.0.0', () => {
+app.listen(PORT, () => {
   console.log(`✅ Server running on PORT: ${PORT}`);
 });
 

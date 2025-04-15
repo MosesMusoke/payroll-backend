@@ -8,7 +8,7 @@ let zohoTokens = { access_token: null, refresh_token: null };
 
 const ZOHO_CLIENT_ID = '1000.JIQELZ079UOV394HCO0CNYMZZTJJ0Q';
 const ZOHO_CLIENT_SECRET = '14482eaee524121306662b0e4b45e88263faba4029';
-const ZOHO_REDIRECT_URI = 'http://localhost:3000/zoho/callback';
+const ZOHO_REDIRECT_URI = 'https://payroll-backend-2.onrender.com/zoho/callback';
 
 exports.zohoAuth = (req, res) => {
   const authUrl = `https://accounts.zoho.com/oauth/v2/auth?scope=ZohoBooks.fullaccess.all&client_id=${ZOHO_CLIENT_ID}&response_type=code&access_type=offline&redirect_uri=${ZOHO_REDIRECT_URI}`;
